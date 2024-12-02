@@ -200,7 +200,7 @@ class ChordDiagramAnalyzer:
 
 def main():
     # Ruta al archivo CSV
-    file_path = "DiagrammeCHORDS/Testeur_[18_09_et_24_10].csv"
+    file_path = "Testeur_[18_09_et_24_10].csv"
     
     # Crear instancia del analizador
     analyzer = ChordDiagramAnalyzer(file_path)
