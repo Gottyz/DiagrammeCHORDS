@@ -10,25 +10,7 @@ import streamlit as st
 class ChordDiagramAnalyzer:
     def __init__(self, file_path: str):
         self.file_path = file_path
-        self.df = self.load_data()  # Asegúrate de definir el método `load_data`
-
-        # Validaciones para asegurar que `self.df` está correctamente inicializado
-        if self.df is None:
-            raise ValueError("self.df no está inicializado")
-        elif 'category' not in self.df.columns:
-            raise ValueError("La columna 'category' no existe en el dataframe")
-
-    def load_data(self):
-        """
-        Método para cargar datos desde el archivo proporcionado.
-        """
-        try:
-            # Supongamos que el archivo es un CSV. Cambia a otro formato si es necesario.
-            import pandas as pd
-            return pd.read_csv(self.file_path)
-        except Exception as e:
-            raise ValueError(f"Error al cargar el archivo: {e}")
-
+        self.df = category
         self.transitions = defaultdict(lambda: defaultdict(int))
         self.categories = set()
         self.visit_counts = defaultdict(int)
