@@ -10,7 +10,7 @@ import streamlit as st
 class ChordDiagramAnalyzer:
     def __init__(self, file_path: str):
         self.file_path = file_path
-        self.df = ['category']
+        self.df = None 
         self.transitions = defaultdict(lambda: defaultdict(int))
         self.categories = set()
         self.visit_counts = defaultdict(int)
