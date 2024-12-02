@@ -10,7 +10,11 @@ import streamlit as st
 class ChordDiagramAnalyzer:
     def __init__(self, file_path: str):
         self.file_path = file_path
-        self.df = None
+        if self.df is None:
+        raise ValueError("self.df no está inicializado")
+        elif 'category' not in self.df.columns:
+        raise ValueError("La columna 'category' no existe en el dataframe")
+
         self.transitions = defaultdict(lambda: defaultdict(int))
         self.categories = set()
         self.visit_counts = defaultdict(int)
