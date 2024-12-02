@@ -200,7 +200,7 @@ class ChordDiagramAnalyzer:
 
 def main():
     # Ruta al archivo CSV
-    file_path = "Testeur_[18_09_et_24_10].csv"
+    file_path = "DiagrammeCHORDS/Testeur_[18_09_et_24_10].csv"
     
     # Crear instancia del analizador
     analyzer = ChordDiagramAnalyzer(file_path)
@@ -210,11 +210,11 @@ def main():
     analyzer.analyze_transitions()
     
     # Crear y mostrar el diagrama
-    fig = analyzer.create_chord_diagram(min_value=1)
+    fig = analyzer.create_chord_diagram(min_value=2)
     fig.show()
 
     # Guardar el diagrama como archivo HTML
-    fig.write_html("ChordDiagram_CLIENTS[20_09_et_25_11].html")
+    #fig.write_html("ChordDiagram_CLIENTS[20_09_et_25_11].html")
 
 
 if __name__ == "__main__":
